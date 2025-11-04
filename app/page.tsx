@@ -68,8 +68,8 @@ const HomePage = () => {
         ></div>
       </div>
 
-      <div className="max-w-4xl mx-auto justify-center items-center pt-20">
-        <h1 className="font-inter-bold  text-center tracking-tighter text-5xl font-bold justify-center items-center">
+      <div className="max-w-4xl mx-auto justify-center items-center pt-16 px-4 sm:px-6">
+        <h1 className="font-inter-bold text-center tracking-tighter text-3xl sm:text-4xl md:text-5xl font-bold justify-center items-center">
           We create beautiful{" "}
           <span
             style={{ fontStyle: "italic" }}
@@ -81,23 +81,26 @@ const HomePage = () => {
           for your product
         </h1>
 
-        <div className="flex justify-center items-center pt-10">
+        <div className="flex justify-center items-center pt-6 sm:pt-10">
           <Button
             data-cal-namespace="book-a-call-with-animated.so"
             data-cal-link="khushaal-choithramani-5mvbsx/book-a-call-with-animated.so"
             data-cal-config='{"layout":"month_view"}'
-            className="font-inter-bold tracking-tighter text-sm justify-center items-center"
+            className="font-inter-bold tracking-tighter text-xs sm:text-sm justify-center items-center"
           >
             Book a quick call
           </Button>
         </div>
 
         {/* CTA Card */}
-        <div className="my-10">
+        <div className="my-6 sm:my-10">
           <CTACard />
         </div>
 
-        <div className="flex flex-row gap-4 max-w-4xl mx-auto justify-center items-center mb-10">
+        <div
+          style={{ scrollbarWidth: "none" }}
+          className="flex flex-row overflow-x-auto gap-4 max-w-4xl mx-auto justify-center items-center mb-10 px-4"
+        >
           <TwitterEmbed />
           <TwitterEmbed />
           <TwitterEmbed />
@@ -106,20 +109,20 @@ const HomePage = () => {
           target="_blank"
           style={{ marginTop: 20 }}
           href="https://www.buildnow.me/"
-          className="font-inter-bold tracking-tighter text-sm justify-center items-center text-white text-md"
+          className="font-inter-bold tracking-tighter text-sm justify-center items-center text-white text-md px-4"
         >
-          <div className="flex flex-row gap-4 max-w-sm mx-auto justify-center items-center bg-orange-500 rounded-full p-2">
-            <p className="font-inter-bold text-center tracking-tighter text-sm justify-center items-center text-white text-md">
+          <div className="flex flex-row gap-2 sm:gap-4 max-w-sm mx-auto justify-center items-center bg-orange-500 rounded-full p-2 sm:p-3">
+            <p className="font-inter-bold text-center tracking-tighter text-xs sm:text-sm justify-center items-center text-white">
               We also design, develop and launch mobile apps.
             </p>
 
-            <ArrowRightIcon className="w-4 h-4" />
+            <ArrowRightIcon className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
           </div>{" "}
         </Link>
         <Link href={"/"}>
           <h1
             style={{ fontStyle: "italic" }}
-            className="font-instrument-serif text-xl text-center mt-2"
+            className="font-instrument-serif text-lg sm:text-xl text-center mt-2 px-4"
           >
             animated.so
           </h1>
