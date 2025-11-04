@@ -1,88 +1,115 @@
-"use client";
-
-import { CodeBlock } from "@/components/code-block";
-import { BorderBeam } from "@/components/ui/border-beam";
+import React from "react";
 import { Button } from "@/components/ui/button";
-import { hasEnvVars } from "@/lib/check-envs";
-import { TwitterLogoIcon } from "@radix-ui/react-icons";
-import { GithubIcon } from "lucide-react";
+import { CTACard } from "@/components/cta-card";
+import Link from "next/link";
+import { ArrowRightIcon } from "@radix-ui/react-icons";
 
-export default function Home() {
-  const code_snippet = `git clone https://github.com/khushxxl/boilerplate-nextjs.git`;
-
-  const openInVSCode = () => {
-    const repoUrl = "https://github.com/khushxxl/boilerplate-nextjs";
-    const vscodeUrl = `vscode://vscode.git/clone?url=${repoUrl}`;
-    window.open(vscodeUrl, "_blank");
+const HomePage = () => {
+  const TwitterEmbed = () => {
+    return (
+      <div>
+        <blockquote className="twitter-tweet" data-media-max-width="450">
+          <p lang="en" dir="ltr">
+            We design mobile apps!{" "}
+            <a href="https://t.co/gtyEr1e8BP">pic.twitter.com/gtyEr1e8BP</a>
+          </p>
+          &mdash; Marcel (@marcelkargul){" "}
+          <a href="https://twitter.com/marcelkargul/status/1982915976716005404?ref_src=twsrc%5Etfw">
+            October 27, 2025
+          </a>
+        </blockquote>{" "}
+        <script
+          async
+          src="https://platform.twitter.com/widgets.js"
+          charSet="utf-8"
+        ></script>
+      </div>
+    );
   };
-
-  const openInCursor = () => {
-    const repoUrl = "https://github.com/khushxxl/boilerplate-nextjs";
-    const cursorUrl = `cursor://open?url=${repoUrl}`;
-    window.open(cursorUrl, "_blank");
-  };
-
   return (
-    <div className="flex flex-col items-center justify-center min-h-[80vh] w-full ">
-      <h1 className="font-poppins text-4xl">actually ship(fast)</h1>
-
-      <div className="mt-10 space-x-4 items-center">
-        <Button
-          className="bg-black text-white border shadow-lg p-5 hover:bg-black"
-          onClick={() =>
-            window.open(
-              "https://github.com/khushxxl/boilerplate-nextjs",
-              "_blank"
-            )
-          }
-        >
-          <GithubIcon />
-          <p>Repo</p>
-        </Button>
-        <Button
-          onClick={() => window.open("https://x.com/khushaal_04", "_blank")}
-          className="bg-black text-white border shadow-lg p-5 hover:bg-black"
-        >
-          <TwitterLogoIcon />
-          <p>Follow</p>
-        </Button>
+    <div className="relative">
+      {/* Grid Background */}
+      <div className="fixed inset-0 -z-10">
+        {/* Vertical dashed lines */}
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(to right, transparent, transparent 79px, #80808040 79px, #80808040 80px)",
+            maskImage:
+              "repeating-linear-gradient(to bottom, black 0px, black 10px, transparent 10px, transparent 20px)",
+            WebkitMaskImage:
+              "repeating-linear-gradient(to bottom, black 0px, black 10px, transparent 10px, transparent 20px)",
+          }}
+        ></div>
+        {/* Horizontal dashed lines */}
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(to bottom, transparent, transparent 79px, #80808040 79px, #80808040 80px)",
+            maskImage:
+              "repeating-linear-gradient(to right, black 0px, black 10px, transparent 10px, transparent 20px)",
+            WebkitMaskImage:
+              "repeating-linear-gradient(to right, black 0px, black 10px, transparent 10px, transparent 20px)",
+          }}
+        ></div>
       </div>
-      <div className="mt-10 hidden sm:flex ">
-        <CodeBlock code={code_snippet} />
-      </div>
 
-      <div className="flex items-center justify-center mt-5 md:space-x-5 md:flex-row flex-col space-y-4 md:space-y-0">
-        <Button
-          onClick={openInVSCode}
-          className="bg-black text-white border-2 shadow-xl p-5 hover:bg-black "
-        >
-          Open in VS Code
-        </Button>
-        <Button
-          onClick={openInCursor}
-          className="bg-black text-white border-2 shadow-xl p-5 hover:bg-black "
-        >
-          Open in Cursor AI
-        </Button>
-      </div>
-      <div className="flex flex-col text-center p-3">
-        <p className="mt-10 text-sm">
-          This is a Nextjs + Supabase boilerplate, come on now start shipping 🚀
-        </p>
+      <div className="max-w-4xl mx-auto justify-center items-center pt-20">
+        <h1 className="font-inter-bold  text-center tracking-tighter text-5xl font-bold justify-center items-center">
+          We create beautiful{" "}
+          <span
+            style={{ fontStyle: "italic" }}
+            className="font-instrument-serif text-orange-500"
+          >
+            animations
+          </span>
+          <br />
+          for your product
+        </h1>
 
-        <div className="flex space-x-4 items-center mt-5 text-sm">
-          <p>✅ Authentication</p>
-          <p>✅ DB CRUD Actions</p>
-          <p>✅ Stripe Payments</p>
+        <div className="flex justify-center items-center pt-10">
+          <Button className="font-inter-bold tracking-tighter text-sm justify-center items-center">
+            Book a quick call
+          </Button>
         </div>
 
-        <h1 className="mt-20">
-          DB Status:{" "}
-          {hasEnvVars
-            ? "Successfully Connected to DB ✅"
-            : "Your DB URL or ANON Key are missing ❌"}
-        </h1>
+        {/* CTA Card */}
+        <div className="my-10">
+          <CTACard />
+        </div>
+
+        <div className="flex flex-row gap-4 max-w-4xl mx-auto justify-center items-center mb-10">
+          <TwitterEmbed />
+          <TwitterEmbed />
+          <TwitterEmbed />
+        </div>
+        <Link
+          target="_blank"
+          style={{ marginTop: 20 }}
+          href="https://www.buildnow.me/"
+          className="font-inter-bold tracking-tighter text-sm justify-center items-center text-white text-md"
+        >
+          <div className="flex flex-row gap-4 max-w-sm mx-auto justify-center items-center bg-orange-500 rounded-full p-2">
+            <p className="font-inter-bold text-center tracking-tighter text-sm justify-center items-center text-white text-md">
+              We also design, develop and launch mobile apps.
+            </p>
+
+            <ArrowRightIcon className="w-4 h-4" />
+          </div>{" "}
+        </Link>
+        <Link href={"/"}>
+          <h1
+            style={{ fontStyle: "italic" }}
+            className="font-instrument-serif text-xl text-center mt-2"
+          >
+            animated.so
+          </h1>
+        </Link>
       </div>
     </div>
   );
-}
+};
+
+export default HomePage;
