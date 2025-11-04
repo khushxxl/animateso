@@ -1,10 +1,22 @@
+"use client";
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { CTACard } from "@/components/cta-card";
 import Link from "next/link";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 
+import { getCalApi } from "@calcom/embed-react";
+import { useEffect } from "react";
+
 const HomePage = () => {
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({
+        namespace: "book-a-call-with-animated.so",
+      });
+      cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
+    })();
+  }, []);
   const TwitterEmbed = () => {
     return (
       <div>
@@ -70,7 +82,12 @@ const HomePage = () => {
         </h1>
 
         <div className="flex justify-center items-center pt-10">
-          <Button className="font-inter-bold tracking-tighter text-sm justify-center items-center">
+          <Button
+            data-cal-namespace="book-a-call-with-animated.so"
+            data-cal-link="khushaal-choithramani-5mvbsx/book-a-call-with-animated.so"
+            data-cal-config='{"layout":"month_view"}'
+            className="font-inter-bold tracking-tighter text-sm justify-center items-center"
+          >
             Book a quick call
           </Button>
         </div>

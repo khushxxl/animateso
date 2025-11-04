@@ -24,6 +24,9 @@ export const CTACard = () => {
           {/* Right side - CTA Button */}
           <div>
             <Button
+              data-cal-namespace="book-a-call-with-animated.so"
+              data-cal-link="khushaal-choithramani-5mvbsx/book-a-call-with-animated.so"
+              data-cal-config='{"layout":"month_view"}'
               size="lg"
               className="font-inter-bold text-base px-6 py-4 bg-orange-500 hover:bg-orange-600 text-white rounded-full"
             >
