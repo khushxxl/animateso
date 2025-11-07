@@ -89,7 +89,7 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${poppins_extrabold.variable} ${poppins_bold.variable} ${inter.variable} ${inter_regular.variable} ${inter_medium.variable} ${inter_bold.variable} ${instrument_serif.variable} ${instrument_serif_italic.variable}`}
       >
-        <Navbar />
+        {/* <Navbar /> */}
         {children}
         <Analytics />
       </body>

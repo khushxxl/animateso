@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { CTACard } from "@/components/cta-card";
 import Link from "next/link";
@@ -7,6 +7,10 @@ import { ArrowRightIcon } from "@radix-ui/react-icons";
 
 import { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import Navbar from "@/components/navbar";
+import Logo from "@/public/logo.png";
 
 const HomePage = () => {
   useEffect(() => {
@@ -38,9 +42,65 @@ const HomePage = () => {
       </div>
     );
   };
+
+  const [showAnimation, setshowAnimation] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setshowAnimation(false);
+    }, 1000);
+  }, []);
+
+  if (showAnimation) {
+    return (
+      <div className="relative h-screen w-screen flex justify-center items-center">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(to right, transparent, transparent 79px, #80808040 79px, #80808040 80px)",
+            maskImage:
+              "repeating-linear-gradient(to bottom, black 0px, black 10px, transparent 10px, transparent 20px)",
+            WebkitMaskImage:
+              "repeating-linear-gradient(to bottom, black 0px, black 10px, transparent 10px, transparent 20px)",
+          }}
+        ></div>
+        <motion.div
+          initial={{ scale: 0, opacity: 0, rotate: -180 }}
+          animate={{ scale: 1, opacity: 1, rotate: 0 }}
+          transition={{
+            type: "spring",
+            stiffness: 200,
+            damping: 15,
+            duration: 0.8,
+          }}
+        >
+          <motion.div
+            animate={{
+              scale: [1, 1.1, 1],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          >
+            <Image
+              src={Logo}
+              className="object-contain"
+              alt="logo"
+              width={200}
+              height={200}
+            />
+          </motion.div>
+        </motion.div>
+      </div>
+    );
+  }
   return (
     <div className="relative">
       {/* Grid Background */}
+      <Navbar />
       <div className="fixed inset-0 -z-10">
         {/* Vertical dashed lines */}
         <div
@@ -68,7 +128,7 @@ const HomePage = () => {
         ></div>
       </div>
 
-      <div className="max-w-4xl mx-auto justify-center items-center pt-16 px-4 sm:px-6">
+      <div className="max-w-4xl mx-auto justify-center items-center pt-14 px-4 sm:px-6">
         <h1 className="font-inter-bold text-center tracking-tighter text-3xl sm:text-4xl md:text-5xl font-bold justify-center items-center">
           We create beautiful{" "}
           <span
@@ -122,7 +182,7 @@ const HomePage = () => {
         <Link href={"/"}>
           <h1
             style={{ fontStyle: "italic" }}
-            className="font-instrument-serif text-lg sm:text-xl text-center mt-2 px-4"
+            className="font-instrument-serif text-lg sm:text-xl text-center  px-4"
           >
             animated.so
           </h1>
