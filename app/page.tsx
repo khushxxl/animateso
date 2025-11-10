@@ -11,6 +11,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Navbar from "@/components/navbar";
 import Logo from "@/public/logo.png";
+import Placeholder from "@/public/placeholder.png";
 
 const HomePage = () => {
   useEffect(() => {
@@ -162,21 +163,21 @@ const HomePage = () => {
           className="flex flex-row overflow-x-auto md:overflow-visible  gap-4 max-w-4xl 2xl:max-w-full w-full mx-auto justify-center items-center mb-10 px-4"
         >
           <Image
-            src={require("@/public/placeholder.png")}
+            src={Placeholder}
             alt="logo"
             width={500}
             height={500}
             className="object-contain w-full h-full rounded-2xl"
           />
           <Image
-            src={require("@/public/placeholder.png")}
+            src={Placeholder}
             alt="logo"
             width={500}
             height={500}
             className="object-contain w-full h-full rounded-2xl"
           />
           <Image
-            src={require("@/public/placeholder.png")}
+            src={Placeholder}
             alt="logo"
             width={500}
             height={500}
