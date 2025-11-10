@@ -24,7 +24,7 @@ const HomePage = () => {
   const TwitterEmbed = () => {
     return (
       <div>
-        <blockquote className="twitter-tweet" data-media-max-width="450">
+        <blockquote className="twitter-tweet" data-media-max-width="600">
           <p lang="en" dir="ltr">
             We design mobile apps!{" "}
             <a href="https://t.co/gtyEr1e8BP">pic.twitter.com/gtyEr1e8BP</a>
@@ -98,7 +98,7 @@ const HomePage = () => {
     );
   }
   return (
-    <div className="relative">
+    <div className="relative h-screen w-screen flex flex-col justify-center items-center">
       {/* Grid Background */}
       <Navbar />
       <div className="fixed inset-0 -z-10">
@@ -128,8 +128,8 @@ const HomePage = () => {
         ></div>
       </div>
 
-      <div className="max-w-4xl mx-auto justify-center items-center pt-14 px-4 sm:px-6">
-        <h1 className="font-inter-bold text-center tracking-tighter text-3xl sm:text-4xl md:text-5xl font-bold justify-center items-center">
+      <div className="max-w-4xl 2xl:max-w-6xl mx-auto justify-center items-center pt-14 px-4 sm:px-6">
+        <h1 className="font-inter-bold text-center tracking-tighter text-3xl sm:text-4xl md:text-5xl 2xl:text-7xl font-bold justify-center items-center">
           We create beautiful{" "}
           <span
             style={{ fontStyle: "italic" }}
@@ -159,11 +159,29 @@ const HomePage = () => {
 
         <div
           style={{ scrollbarWidth: "none" }}
-          className="flex flex-row overflow-x-auto gap-4 max-w-4xl mx-auto justify-center items-center mb-10 px-4"
+          className="flex flex-row overflow-x-auto md:overflow-visible  gap-4 max-w-4xl 2xl:max-w-full w-full mx-auto justify-center items-center mb-10 px-4"
         >
-          <TwitterEmbed />
-          <TwitterEmbed />
-          <TwitterEmbed />
+          <Image
+            src={require("@/public/placeholder.png")}
+            alt="logo"
+            width={500}
+            height={500}
+            className="object-contain w-full h-full rounded-2xl"
+          />
+          <Image
+            src={require("@/public/placeholder.png")}
+            alt="logo"
+            width={500}
+            height={500}
+            className="object-contain w-full h-full rounded-2xl"
+          />
+          <Image
+            src={require("@/public/placeholder.png")}
+            alt="logo"
+            width={500}
+            height={500}
+            className="object-contain w-full h-full rounded-2xl"
+          />
         </div>
         <Link
           target="_blank"

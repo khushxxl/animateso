@@ -72,17 +72,14 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <Head>
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:site"
-          content="https://boilerplate-nextjs-delta.vercel.app/"
-        />
+        <meta name="twitter:site" content="https://animated.so/" />
         <meta
           name="twitter:title"
-          content="actually ship(fast) - Nextjs Boilerplate"
+          content="animated.so - we create beautiful animations for your product"
         />
         <meta
           name="twitter:description"
-          content="actually ship(fast) - a simple to use boilerplate right out of the box with auth, payments and db functions all packed with in!"
+          content="animated.so - we create beautiful animations for your product"
         />
         <meta name="twitter:image" content="/twitter-image.png" />
       </Head>
