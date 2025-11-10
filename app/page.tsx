@@ -162,12 +162,16 @@ const HomePage = () => {
           style={{ scrollbarWidth: "none" }}
           className="flex flex-row overflow-x-auto md:overflow-visible  gap-4 max-w-4xl 2xl:max-w-full w-full mx-auto justify-center items-center mb-10 px-4"
         >
-          <Image
-            src={Placeholder}
-            alt="logo"
-            width={500}
-            height={500}
-            className="object-contain w-full h-full rounded-2xl"
+          <video
+            src={"/promo-1.mp4"}
+            width={450}
+            height={450}
+            autoPlay
+            controls={false}
+            loop
+            muted
+            playsInline
+            className="object-contain rounded-2xl cursor-pointer transition-transform duration-200 ease-in-out hover:scale-125"
           />
           <Image
             src={Placeholder}
