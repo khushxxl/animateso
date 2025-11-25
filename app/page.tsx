@@ -133,7 +133,7 @@ const HomePage = () => {
         ></div>
       </div>
 
-      <div className="max-w-4xl 2xl:max-w-6xl mx-auto justify-center items-center pt-14 px-4 sm:px-6">
+      <div className="max-w-4xl 2xl:max-w-6xl mx-auto justify-center items-center pt-[300px] md:pt-14 px-4 sm:px-6">
         <Link className="flex flex-row justify-center items-center" href={"/"}>
           <Image src={Logo} alt="logo" width={50} height={50} />
         </Link>
