@@ -164,18 +164,16 @@ const HomePage = () => {
         <div className="my-6 sm:my-10">
           <CTACard />
         </div>
-
-        <div
-          style={{ scrollbarWidth: "none" }}
-          className="flex flex-row overflow-x-auto md:overflow-visible  gap-4 max-w-4xl 2xl:max-w-full w-full mx-auto justify-center items-center mb-10 px-4"
-        >
+        {/* // promo videos section */}
+        <div className="flex flex-col md:flex-row gap-4 sm:gap-6 max-w-4xl 2xl:max-w-full w-full mx-auto justify-center items-center mb-10 px-4 sm:px-6">
           <Link
             target="_blank"
             href={
               "https://drive.google.com/file/d/19c_2-gXI7VI86C3Rgq8_fv5lfKwTkSoe/view?usp=drive_link"
             }
+            className="w-full md:w-auto"
           >
-            <div className="relative w-[400px]  rounded-3xl overflow-hidden cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 rounded-image">
+            <div className="relative w-full md:w-[400px] rounded-2xl sm:rounded-3xl overflow-hidden cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 rounded-image">
               <Image
                 src={Promo1}
                 alt="logo"
@@ -183,10 +181,12 @@ const HomePage = () => {
                 height={400}
                 className="object-contain w-full h-full"
               />
-              <div className="absolute inset-0 bg-black/50 rounded-3xl flex justify-center items-center">
-                <PlayIcon fill="white" className="w-6 h-6 text-white" />
+              <div className="absolute inset-0 bg-black/50 rounded-2xl sm:rounded-3xl flex justify-center items-center">
+                <PlayIcon
+                  fill="white"
+                  className="w-5 h-5 sm:w-6 sm:h-6 text-white"
+                />
               </div>
-              <br />
             </div>
           </Link>
           <Link
@@ -194,8 +194,9 @@ const HomePage = () => {
             href={
               "https://drive.google.com/file/d/1OTBqxZlmLR15uwdu-vjPOZGUmM-kdz0f/view?usp=sharing"
             }
+            className="w-full md:w-auto"
           >
-            <div className="relative w-[430px]  rounded-3xl overflow-hidden cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 rounded-image">
+            <div className="relative w-full md:w-[430px] rounded-2xl sm:rounded-3xl overflow-hidden cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 rounded-image">
               <Image
                 src={Promo2}
                 alt="logo"
@@ -203,10 +204,12 @@ const HomePage = () => {
                 height={500}
                 className="object-contain w-full h-full"
               />
-              <div className="absolute inset-0 bg-black/50 rounded-3xl flex justify-center items-center">
-                <PlayIcon fill="white" className="w-6 h-6 text-white" />
+              <div className="absolute inset-0 bg-black/50 rounded-2xl sm:rounded-3xl flex justify-center items-center">
+                <PlayIcon
+                  fill="white"
+                  className="w-5 h-5 sm:w-6 sm:h-6 text-white"
+                />
               </div>
-              <br />
             </div>
           </Link>
         </div>
