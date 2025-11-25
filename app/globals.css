@@ -74,4 +74,8 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
+
+  .rounded-image img {
+    border-radius: 1.5rem !important;
+  }
 }

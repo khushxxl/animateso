@@ -12,6 +12,10 @@ import { motion } from "framer-motion";
 import Navbar from "@/components/navbar";
 import Logo from "@/public/logo.png";
 import Placeholder from "@/public/placeholder.png";
+import Promo1 from "@/public/thumb-1.png";
+import Promo2 from "@/public/thumb-2.png";
+
+import { PlayIcon } from "lucide-react";
 
 const HomePage = () => {
   useEffect(() => {
@@ -101,7 +105,7 @@ const HomePage = () => {
   return (
     <div className="relative h-screen w-screen flex flex-col justify-center items-center">
       {/* Grid Background */}
-      <Navbar />
+
       <div className="fixed inset-0 -z-10">
         {/* Vertical dashed lines */}
         <div
@@ -130,7 +134,10 @@ const HomePage = () => {
       </div>
 
       <div className="max-w-4xl 2xl:max-w-6xl mx-auto justify-center items-center pt-14 px-4 sm:px-6">
-        <h1 className="font-inter-bold text-center tracking-tighter text-3xl sm:text-4xl md:text-5xl 2xl:text-7xl font-bold justify-center items-center">
+        <Link className="flex flex-row justify-center items-center" href={"/"}>
+          <Image src={Logo} alt="logo" width={50} height={50} />
+        </Link>
+        <h1 className="font-inter-bold text-center tracking-tighter text-3xl sm:text-4xl md:text-5xl 2xl:text-7xl font-bold justify-center items-center mt-4">
           We create beautiful{" "}
           <span
             style={{ fontStyle: "italic" }}
@@ -162,31 +169,46 @@ const HomePage = () => {
           style={{ scrollbarWidth: "none" }}
           className="flex flex-row overflow-x-auto md:overflow-visible  gap-4 max-w-4xl 2xl:max-w-full w-full mx-auto justify-center items-center mb-10 px-4"
         >
-          <video
-            src={"/promo-1.mp4"}
-            width={450}
-            height={450}
-            autoPlay
-            controls={false}
-            loop
-            muted
-            playsInline
-            className="object-contain rounded-2xl cursor-pointer transition-transform duration-200 ease-in-out hover:scale-125"
-          />
-          <Image
-            src={Placeholder}
-            alt="logo"
-            width={500}
-            height={500}
-            className="object-contain w-full h-full rounded-2xl"
-          />
-          <Image
-            src={Placeholder}
-            alt="logo"
-            width={500}
-            height={500}
-            className="object-contain w-full h-full rounded-2xl"
-          />
+          <Link
+            target="_blank"
+            href={
+              "https://drive.google.com/file/d/19c_2-gXI7VI86C3Rgq8_fv5lfKwTkSoe/view?usp=drive_link"
+            }
+          >
+            <div className="relative w-[400px]  rounded-3xl overflow-hidden cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 rounded-image">
+              <Image
+                src={Promo1}
+                alt="logo"
+                width={400}
+                height={400}
+                className="object-contain w-full h-full"
+              />
+              <div className="absolute inset-0 bg-black/50 rounded-3xl flex justify-center items-center">
+                <PlayIcon fill="white" className="w-6 h-6 text-white" />
+              </div>
+              <br />
+            </div>
+          </Link>
+          <Link
+            target="_blank"
+            href={
+              "https://drive.google.com/file/d/1OTBqxZlmLR15uwdu-vjPOZGUmM-kdz0f/view?usp=sharing"
+            }
+          >
+            <div className="relative w-[430px]  rounded-3xl overflow-hidden cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 rounded-image">
+              <Image
+                src={Promo2}
+                alt="logo"
+                width={500}
+                height={500}
+                className="object-contain w-full h-full"
+              />
+              <div className="absolute inset-0 bg-black/50 rounded-3xl flex justify-center items-center">
+                <PlayIcon fill="white" className="w-6 h-6 text-white" />
+              </div>
+              <br />
+            </div>
+          </Link>
         </div>
         <Link
           target="_blank"

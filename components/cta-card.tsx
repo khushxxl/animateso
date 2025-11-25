@@ -28,7 +28,17 @@ export const CTACard = () => {
               style={{ fontFamily: "var(--font-inter-bold)" }}
               className=" text-white text-md tracking-tighter"
             >
-              <span className="line-through">$500</span> $249 for next 2 spots
+              <span className="line-through">$500</span>{" "}
+              <span
+                style={{
+                  fontFamily: "var(--font-instrument-serif-italic)",
+                  fontStyle: "italic",
+                }}
+                className="text-orange-500 tracking-wider"
+              >
+                $349
+              </span>{" "}
+              for next 2 spots
             </p>
           </div>
 
