@@ -20,11 +20,11 @@ export const CTACard = () => {
           <div className="flex-1 w-full md:w-auto text-center md:text-left">
             <h3 className="font-inter-extrabold text-sm sm:text-md tracking-tight mb-1 sm:mb-2">
               <div className="flex items-center justify-center md:justify-start gap-2">
-                <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
-                Early Bird Sale
+                <div className="w-2 h-2 text-md bg-orange-500 rounded-full animate-pulse" />
+                <p className="text-md">Early Bird Sale</p>
               </div>
             </h3>
-            <p
+            {/* <p
               style={{ fontFamily: "var(--font-inter-bold)" }}
               className="text-white text-sm sm:text-md tracking-tighter"
             >
@@ -39,7 +39,7 @@ export const CTACard = () => {
                 $349
               </span>{" "}
               for next 2 spots
-            </p>
+            </p> */}
           </div>
 
           {/* Right side - CTA Button */}
