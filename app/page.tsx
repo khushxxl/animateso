@@ -16,6 +16,7 @@ import Placeholder from "@/public/placeholder.png";
 import Promo1 from "@/public/thumb-1.png";
 import Promo2 from "@/public/thumb-2.png";
 import Promo3 from "@/public/thumb-3.png";
+import Logo2 from "@/public/logo-2.png";
 const HomePage = () => {
   useEffect(() => {
     (async function () {
@@ -132,85 +133,96 @@ const HomePage = () => {
         ></div>
       </div>
 
-      <div className="max-w-4xl 2xl:max-w-6xl mx-auto justify-center items-center pt-[300px] md:pt-14 px-4 sm:px-6">
-        <Link className="flex flex-row justify-center items-center" href={"/"}>
-          <Image src={Logo} alt="logo" width={50} height={50} />
-        </Link>
-        <h1 className="font-inter-bold text-center tracking-tighter text-3xl sm:text-4xl md:text-5xl 2xl:text-7xl font-bold justify-center items-center mt-4">
-          We create beautiful{" "}
-          <span
-            style={{ fontStyle: "italic" }}
-            className="font-instrument-serif text-orange-500"
-          >
-            animations
-          </span>
-          <br />
-          for your product
-        </h1>
-
-        {/* CTA Card */}
-        <div className="my-6 sm:my-10">
-          <CTACard />
+      <div className="w-full min-h-screen mx-auto flex flex-col lg:flex-row justify-center items-center px-4 sm:px-6 lg:px-0">
+        <div
+          className="w-full lg:w-[50%] h-[50vh] lg:h-screen min-h-[500px] mt-3 lg:mt-0 lg:min-h-screen"
+          style={{
+            backgroundImage: "url('/placeholder.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundBlendMode: "overlay",
+          }}
+        >
+          <div className="flex justify-center flex-col items-center h-full py-8 lg:py-0">
+            <Image
+              src={Logo2}
+              alt="Placeholder"
+              width={100}
+              height={100}
+              className="object-contain w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-[100px] lg:h-[100px]"
+            />
+            <h1 className="font-inter-bold text-center text-white tracking-tighter text-2xl sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-7xl font-bold justify-center items-center mt-4 sm:mt-6 lg:mt-20 px-4">
+              We create beautiful{" "}
+              <span
+                style={{ fontStyle: "italic" }}
+                className="font-instrument-serif text-orange-500"
+              >
+                animations
+              </span>
+              <br />
+              for your product
+            </h1>
+            <div className="my-4 sm:my-6 lg:my-10">
+              <CTACard />
+            </div>
+            <p
+              style={{ fontFamily: "var(--font-instrument-serif)" }}
+              className="text-lg sm:text-xl lg:text-2xl text-white italic"
+            >
+              animated.so
+            </p>
+          </div>
         </div>
 
-        <div className="flex justify-center items-center p-3 mb-5">
-          <p
-            style={{ fontStyle: "italic" }}
-            className="font-instrument-serif text-lg sm:text-3xl text-center  px-4"
+        <div className="flex flex-col gap-4 w-full lg:w-[50%] justify-center items-center py-8 lg:py-0 px-4 sm:px-6 lg:px-0">
+          <h1
+            style={{ fontFamily: "var(--font-instrument-serif)" }}
+            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center italic"
           >
             See our Craft
-          </p>
-        </div>
-
-        {/* // promo videos section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center justify-center mx-auto">
-          <VideoPromoCard
-            href="https://drive.google.com/file/d/19c_2-gXI7VI86C3Rgq8_fv5lfKwTkSoe/view?usp=drive_link"
-            imageSrc={Promo1}
-            alt="Promo video 1"
-            width={400}
-            height={400}
-          />
-          <VideoPromoCard
-            href="https://drive.google.com/file/d/1OTBqxZlmLR15uwdu-vjPOZGUmM-kdz0f/view?usp=sharing"
-            imageSrc={Promo2}
-            alt="Promo video 2"
-            width={500}
-            height={500}
-            containerWidthClass="md:w-[430px]"
-          />
-          <VideoPromoCard
-            href="https://drive.google.com/file/d/1UWBeJ2NXiBA_DtvBhORiEQb5-cQXKZO7/view?usp=sharing"
-            imageSrc={Promo3}
-            alt="Promo video 3"
-            width={500}
-            height={500}
-            containerWidthClass="md:w-[430px]"
-            className="col-span-1 md:col-span-2 justify-self-center"
-          />
-        </div>
-        <Link
-          target="_blank"
-          style={{ marginTop: 20 }}
-          href="https://www.buildnow.me/"
-          className="font-inter-bold tracking-tighter text-sm justify-center items-center text-white text-md px-4"
-        >
-          <div className="flex flex-row gap-2 sm:gap-4 max-w-sm mx-auto justify-center items-center bg-orange-500 rounded-full p-2 sm:p-3">
-            <p className="font-inter-bold text-center tracking-tighter text-xs sm:text-sm justify-center items-center text-white">
-              We also design, develop and launch mobile apps.
-            </p>
-
-            <ArrowRightIcon className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
-          </div>{" "}
-        </Link>
-        <Link href={"/"}>
-          <h1
-            style={{ fontStyle: "italic" }}
-            className="font-instrument-serif text-lg sm:text-xl text-center  px-4"
-          >
-            animated.so
           </h1>
-        </Link>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-2xl">
+            <VideoPromoCard
+              href="https://drive.google.com/file/d/19c_2-gXI7VI86C3Rgq8_fv5lfKwTkSoe/view?usp=drive_link"
+              imageSrc={Promo1}
+              alt="Promo video 1"
+              width={300}
+              height={300}
+              containerWidthClass="w-full sm:w-[300px]"
+            />
+            <VideoPromoCard
+              href="https://drive.google.com/file/d/1OTBqxZlmLR15uwdu-vjPOZGUmM-kdz0f/view?usp=sharing"
+              imageSrc={Promo2}
+              alt="Promo video 2"
+              width={300}
+              height={300}
+              containerWidthClass="w-full sm:w-[300px]"
+            />
+            <VideoPromoCard
+              href="https://drive.google.com/file/d/1UWBeJ2NXiBA_DtvBhORiEQb5-cQXKZO7/view?usp=sharing"
+              imageSrc={Promo3}
+              alt="Promo video 3"
+              width={300}
+              height={300}
+              containerWidthClass="w-full sm:w-[300px]"
+              className="col-span-1 sm:col-span-2 justify-self-center"
+            />
+          </div>
+          <Link
+            target="_blank"
+            style={{ marginTop: 20 }}
+            href="https://www.buildnow.me/"
+            className="font-inter-bold tracking-tighter text-sm justify-center items-center text-white text-md px-4 w-full max-w-sm"
+          >
+            <div className="flex flex-row gap-2 sm:gap-4 max-w-sm mx-auto justify-center items-center bg-orange-500 rounded-full p-2 sm:p-3">
+              <p className="font-inter-bold text-center tracking-tighter text-xs sm:text-sm justify-center items-center text-white">
+                We also design, develop and launch mobile apps.
+              </p>
+
+              <ArrowRightIcon className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
+            </div>{" "}
+          </Link>
+        </div>
       </div>
     </div>
   );

@@ -7,13 +7,13 @@ export const CTACard = () => {
   return (
     <div className="w-full max-w-xl mx-auto px-2 sm:px-0">
       <div
-        className="relative border border-gray-200 dark:border-gray-800 rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 overflow-hidden"
-        style={{
-          backgroundImage: "url('/placeholder.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundBlendMode: "overlay",
-        }}
+        className="relative border border-gray-700 dark:border-gray-800 rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 overflow-hidden"
+        // style={{
+        //   backgroundImage: "url('/placeholder.png')",
+        //   backgroundSize: "cover",
+        //   backgroundPosition: "center",
+        //   backgroundBlendMode: "overlay",
+        // }}
       >
         <div className="relative z-10 flex text-white flex-col md:flex-row items-center justify-between gap-3 sm:gap-4 md:gap-6">
           {/* Left side - Text content */}
