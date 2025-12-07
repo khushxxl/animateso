@@ -135,7 +135,7 @@ const HomePage = () => {
 
       <div className="w-full min-h-screen mx-auto flex flex-col lg:flex-row justify-center items-center px-4 sm:px-6 lg:px-0">
         <div
-          className="w-full lg:w-[50%] h-[50vh] lg:h-screen min-h-[500px] mt-3 lg:mt-0 lg:min-h-screen"
+          className="w-full lg:w-[50%] h-[50vh] lg:h-screen min-h-[500px] rounded-2xl lg:rounded-none mt-3 lg:mt-0 lg:min-h-screen"
           style={{
             backgroundImage: "url('/placeholder.png')",
             backgroundSize: "cover",
