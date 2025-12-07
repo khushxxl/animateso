@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { CTACard } from "@/components/cta-card";
+import { VideoPromoCard } from "@/components/video-promo-card";
 import Link from "next/link";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 
@@ -14,9 +15,7 @@ import Logo from "@/public/logo.png";
 import Placeholder from "@/public/placeholder.png";
 import Promo1 from "@/public/thumb-1.png";
 import Promo2 from "@/public/thumb-2.png";
-
-import { PlayIcon } from "lucide-react";
-
+import Promo3 from "@/public/thumb-3.png";
 const HomePage = () => {
   useEffect(() => {
     (async function () {
@@ -103,7 +102,7 @@ const HomePage = () => {
     );
   }
   return (
-    <div className="relative h-screen w-screen flex flex-col justify-center items-center">
+    <div className="relative  w-screen flex flex-col justify-center items-center">
       {/* Grid Background */}
 
       <div className="fixed inset-0 -z-10">
@@ -149,69 +148,46 @@ const HomePage = () => {
           for your product
         </h1>
 
-        <div className="flex justify-center items-center pt-6 sm:pt-10">
-          <Button
-            data-cal-namespace="book-a-call-with-animated.so"
-            data-cal-link="khushaal-choithramani-5mvbsx/book-a-call-with-animated.so"
-            data-cal-config='{"layout":"month_view"}'
-            className="font-inter-bold tracking-tighter text-xs sm:text-sm justify-center items-center"
-          >
-            Book a quick call
-          </Button>
-        </div>
-
         {/* CTA Card */}
         <div className="my-6 sm:my-10">
           <CTACard />
         </div>
+
+        <div className="flex justify-center items-center p-3 mb-5">
+          <p
+            style={{ fontStyle: "italic" }}
+            className="font-instrument-serif text-lg sm:text-3xl text-center  px-4"
+          >
+            See our Craft
+          </p>
+        </div>
+
         {/* // promo videos section */}
-        <div className="flex flex-col md:flex-row gap-4 sm:gap-6 max-w-4xl 2xl:max-w-full w-full mx-auto justify-center items-center mb-10 px-4 sm:px-6">
-          <Link
-            target="_blank"
-            href={
-              "https://drive.google.com/file/d/19c_2-gXI7VI86C3Rgq8_fv5lfKwTkSoe/view?usp=drive_link"
-            }
-            className="w-full md:w-auto"
-          >
-            <div className="relative w-full md:w-[400px] rounded-2xl sm:rounded-3xl overflow-hidden cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 rounded-image">
-              <Image
-                src={Promo1}
-                alt="logo"
-                width={400}
-                height={400}
-                className="object-contain w-full h-full"
-              />
-              <div className="absolute inset-0 bg-black/50 rounded-2xl sm:rounded-3xl flex justify-center items-center">
-                <PlayIcon
-                  fill="white"
-                  className="w-5 h-5 sm:w-6 sm:h-6 text-white"
-                />
-              </div>
-            </div>
-          </Link>
-          <Link
-            target="_blank"
-            href={
-              "https://drive.google.com/file/d/1OTBqxZlmLR15uwdu-vjPOZGUmM-kdz0f/view?usp=sharing"
-            }
-            className="w-full md:w-auto"
-          >
-            <div className="relative w-full md:w-[430px] rounded-2xl sm:rounded-3xl overflow-hidden cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 rounded-image">
-              <Image
-                src={Promo2}
-                alt="logo"
-                width={500}
-                height={500}
-                className="object-contain w-full h-full"
-              />
-              <div className="absolute inset-0 bg-black/50 rounded-2xl sm:rounded-3xl flex justify-center items-center">
-                <PlayIcon
-                  fill="white"
-                  className="w-5 h-5 sm:w-6 sm:h-6 text-white"
-                />
-              </div>
-            </div>
-          </Link>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center justify-center mx-auto">
+          <VideoPromoCard
+            href="https://drive.google.com/file/d/19c_2-gXI7VI86C3Rgq8_fv5lfKwTkSoe/view?usp=drive_link"
+            imageSrc={Promo1}
+            alt="Promo video 1"
+            width={400}
+            height={400}
+          />
+          <VideoPromoCard
+            href="https://drive.google.com/file/d/1OTBqxZlmLR15uwdu-vjPOZGUmM-kdz0f/view?usp=sharing"
+            imageSrc={Promo2}
+            alt="Promo video 2"
+            width={500}
+            height={500}
+            containerWidthClass="md:w-[430px]"
+          />
+          <VideoPromoCard
+            href="https://drive.google.com/file/d/1UWBeJ2NXiBA_DtvBhORiEQb5-cQXKZO7/view?usp=sharing"
+            imageSrc={Promo3}
+            alt="Promo video 3"
+            width={500}
+            height={500}
+            containerWidthClass="md:w-[430px]"
+            className="col-span-1 md:col-span-2 justify-self-center"
+          />
         </div>
         <Link
           target="_blank"

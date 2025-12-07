@@ -20,8 +20,10 @@ export const CTACard = () => {
           <div className="flex-1 w-full md:w-auto text-center md:text-left">
             <h3 className="font-inter-extrabold text-sm sm:text-md tracking-tight mb-1 sm:mb-2">
               <div className="flex items-center justify-center md:justify-start gap-2">
-                <div className="w-2 h-2 text-md bg-orange-500 rounded-full animate-pulse" />
-                <p className="text-md">Early Bird Sale</p>
+                {/* <div className="w-2 h-2 text-md bg-orange-500 rounded-full animate-pulse" /> */}
+                <p className="text-md font-inter-bold">
+                  Let us strategise, storyboard <br /> and animate your video.
+                </p>
               </div>
             </h3>
             {/* <p
@@ -51,7 +53,7 @@ export const CTACard = () => {
               size="lg"
               className="font-inter-bold text-xs sm:text-sm md:text-base px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 md:py-4 bg-orange-500 hover:bg-orange-600 text-white rounded-full w-full md:w-auto"
             >
-              Claim Your Spot
+              Book a call
             </Button>
           </div>
         </div>
