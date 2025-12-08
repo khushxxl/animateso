@@ -19,33 +19,27 @@ export const VideoPromoCard: React.FC<VideoPromoCardProps> = ({
   href,
   imageSrc,
   alt,
-  width = 400,
+  width = 600,
   height = 400,
   className = "",
   containerWidthClass = "md:w-[400px]",
 }) => {
   return (
-    <Link
-      target="_blank"
-      href={href}
-      className={`w-full md:w-auto ${className}`}
-    >
-      <div className={`relative w-full ${containerWidthClass} rounded-2xl sm:rounded-3xl overflow-hidden cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 rounded-image`}>
-        <Image
-          src={imageSrc}
-          alt={alt}
+    <div className={`block ${containerWidthClass} mx-auto my-4`}>
+      <div className={`relative group overflow-hidden rounded-xl ${className}`}>
+        <video
+          src={href}
+          controls
+          autoPlay={true}
+          loop={true}
+          muted={true}
+          className="w-full h-auto object-cover"
           width={width}
           height={height}
-          className="object-contain w-full h-full"
-        />
-        <div className="absolute inset-0 bg-black/50 rounded-2xl sm:rounded-3xl flex justify-center items-center">
-          <PlayIcon
-            fill="white"
-            className="w-5 h-5 sm:w-6 sm:h-6 text-white"
-          />
-        </div>
+        >
+          Your browser does not support the video tag.
+        </video>
       </div>
-    </Link>
+    </div>
   );
 };
-

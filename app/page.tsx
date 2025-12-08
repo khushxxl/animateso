@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { CTACard } from "@/components/cta-card";
 import { VideoPromoCard } from "@/components/video-promo-card";
+import { TestimonialCard } from "@/components/testimonial-card";
 import Link from "next/link";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 
@@ -103,39 +104,12 @@ const HomePage = () => {
     );
   }
   return (
-    <div className="relative  w-screen flex flex-col justify-center items-center">
+    <div className="relative  w-screen flex flex-col justify-center items-center bg-black">
       {/* Grid Background */}
 
-      <div className="fixed inset-0 -z-10">
-        {/* Vertical dashed lines */}
+      <div className="flex flex-col lg:flex-row  w-full ">
         <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              "repeating-linear-gradient(to right, transparent, transparent 79px, #80808040 79px, #80808040 80px)",
-            maskImage:
-              "repeating-linear-gradient(to bottom, black 0px, black 10px, transparent 10px, transparent 20px)",
-            WebkitMaskImage:
-              "repeating-linear-gradient(to bottom, black 0px, black 10px, transparent 10px, transparent 20px)",
-          }}
-        ></div>
-        {/* Horizontal dashed lines */}
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              "repeating-linear-gradient(to bottom, transparent, transparent 79px, #80808040 79px, #80808040 80px)",
-            maskImage:
-              "repeating-linear-gradient(to right, black 0px, black 10px, transparent 10px, transparent 20px)",
-            WebkitMaskImage:
-              "repeating-linear-gradient(to right, black 0px, black 10px, transparent 10px, transparent 20px)",
-          }}
-        ></div>
-      </div>
-
-      <div className="w-full min-h-screen mx-auto flex flex-col lg:flex-row justify-center items-center px-4 sm:px-6 lg:px-0">
-        <div
-          className="w-full lg:w-[50%] h-[50vh] lg:h-screen min-h-[500px] rounded-2xl lg:rounded-none mt-3 lg:mt-0 lg:min-h-screen"
+          className=" lg:w-[40%] h-[50vh] md:sticky md:top-0  lg:h-screen min-h-[500px] rounded-2xl lg:rounded-none mt-3 lg:mt-0 lg:min-h-screen"
           style={{
             backgroundImage: "url('/placeholder.png')",
             backgroundSize: "cover",
@@ -143,15 +117,15 @@ const HomePage = () => {
             backgroundBlendMode: "overlay",
           }}
         >
-          <div className="flex justify-center flex-col items-center h-full py-8 lg:py-0">
+          <div className="flex  flex-col  h-full justify-center items-center md:items-start md:justify-start py-8 lg:py-0">
             <Image
               src={Logo2}
               alt="Placeholder"
               width={100}
               height={100}
-              className="object-contain w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-[100px] lg:h-[100px]"
+              className="object-contain md:ml-10 md:mt-10 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-[100px] lg:h-[100px]"
             />
-            <h1 className="font-inter-bold text-center text-white tracking-tighter text-2xl sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-7xl font-bold justify-center items-center mt-4 sm:mt-6 lg:mt-20 px-4">
+            <h1 className="font-inter-bold  text-white mb-10 md:mb-0 text-center md:text-left tracking-tighter text-2xl sm:text-3xl md:text-4xl lg:text-3xl  font-bold justify-center items-center mt-4 sm:mt-6 lg:mt-5 px-4">
               We create beautiful{" "}
               <span
                 style={{ fontStyle: "italic" }}
@@ -162,66 +136,83 @@ const HomePage = () => {
               <br />
               for your product
             </h1>
-            <div className="my-4 sm:my-6 lg:my-10">
-              <CTACard />
+            <div className="flex flex-col gap-4  md:absolute md:bottom-10 w-full justify-center items-center ">
+              <div className="w-full flex justify-center items-center">
+                <CTACard />
+              </div>
+              <Link
+                target="_blank"
+                style={{ marginTop: 20 }}
+                href="https://www.buildnow.me/"
+                className="font-inter-bold tracking-tighter text-sm justify-center items-center text-white text-md px-4 w-full max-w-sm"
+              >
+                <div className="flex flex-row gap-2 sm:gap-4 max-w-sm mx-auto justify-center items-center bg-orange-500 rounded-full p-2 sm:p-3">
+                  <p className="font-inter-bold text-center tracking-tighter text-xs sm:text-sm justify-center items-center text-white">
+                    We also design, develop and launch mobile apps.
+                  </p>
+
+                  <ArrowRightIcon className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
+                </div>{" "}
+              </Link>
+              <p
+                style={{ fontFamily: "var(--font-instrument-serif)" }}
+                className="text-lg sm:text-xl lg:text-2xl text-white text-center italic"
+              >
+                animated.so
+              </p>
             </div>
-            <p
-              style={{ fontFamily: "var(--font-instrument-serif)" }}
-              className="text-lg sm:text-xl lg:text-2xl text-white italic"
-            >
-              animated.so
-            </p>
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 w-full lg:w-[50%] justify-center items-center py-8 lg:py-0 px-4 sm:px-6 lg:px-0">
+        <div className="flex flex-col gap-4 w-full lg:w-full mt-5 justify-center items-center overflow-y-auto py-8 lg:py-0 px-4 sm:px-6 lg:px-0">
           <h1
             style={{ fontFamily: "var(--font-instrument-serif)" }}
-            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center italic"
+            className="text-white text-5xl font-bold"
           >
-            See our Craft
+            Our Craft
           </h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-2xl">
-            <VideoPromoCard
-              href="https://drive.google.com/file/d/19c_2-gXI7VI86C3Rgq8_fv5lfKwTkSoe/view?usp=drive_link"
-              imageSrc={Promo1}
-              alt="Promo video 1"
-              width={300}
-              height={300}
-              containerWidthClass="w-full sm:w-[300px]"
-            />
-            <VideoPromoCard
-              href="https://drive.google.com/file/d/1OTBqxZlmLR15uwdu-vjPOZGUmM-kdz0f/view?usp=sharing"
-              imageSrc={Promo2}
-              alt="Promo video 2"
-              width={300}
-              height={300}
-              containerWidthClass="w-full sm:w-[300px]"
-            />
-            <VideoPromoCard
-              href="https://drive.google.com/file/d/1UWBeJ2NXiBA_DtvBhORiEQb5-cQXKZO7/view?usp=sharing"
-              imageSrc={Promo3}
-              alt="Promo video 3"
-              width={300}
-              height={300}
-              containerWidthClass="w-full sm:w-[300px]"
-              className="col-span-1 sm:col-span-2 justify-self-center"
-            />
-          </div>
-          <Link
-            target="_blank"
-            style={{ marginTop: 20 }}
-            href="https://www.buildnow.me/"
-            className="font-inter-bold tracking-tighter text-sm justify-center items-center text-white text-md px-4 w-full max-w-sm"
-          >
-            <div className="flex flex-row gap-2 sm:gap-4 max-w-sm mx-auto justify-center items-center bg-orange-500 rounded-full p-2 sm:p-3">
-              <p className="font-inter-bold text-center tracking-tighter text-xs sm:text-sm justify-center items-center text-white">
-                We also design, develop and launch mobile apps.
-              </p>
+          <VideoPromoCard
+            href="https://ik.imagekit.io/m9addwbun/tlv%20price%20watch%20final%202.mp4"
+            imageSrc={Promo2}
+            alt="Promo video 2"
+            width={600}
+            height={300}
+            containerWidthClass="w-full sm:w-[1000px]"
+          />
+          <VideoPromoCard
+            href="https://ik.imagekit.io/m9addwbun/datafa.st%20demo%20(1).mp4"
+            imageSrc={Promo3}
+            alt="Promo video 3"
+            width={300}
+            height={300}
+            containerWidthClass="w-full sm:w-[1000px]"
+          />
+          <VideoPromoCard
+            href="https://ik.imagekit.io/m9addwbun/promo-1.mp4"
+            imageSrc={Promo1}
+            alt="Promo video 1"
+            width={200}
+            height={200}
+            containerWidthClass="w-full sm:w-[1000px]"
+            className=""
+          />
 
-              <ArrowRightIcon className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
-            </div>{" "}
-          </Link>
+          {/* <div className="w-full sm:w-[1000px] flex flex-col gap-4 justify-center items-center mt-10 mb-10">
+            <h1
+              style={{ fontFamily: "var(--font-instrument-serif)" }}
+              className="text-white text-5xl font-bold mb-6"
+            >
+              Testimonials
+            </h1>
+            <div className="flex flex-col gap-4">
+              <TestimonialCard
+                quote="animated.so created a fantastic product demo for our TLV Price Watch by Viti Science app. Communication was clear and professional, and they quickly understood our goals and target audience. They were attentive to detail, fast with revisions, and delivered high-quality work under a tight timeline. Highly recommended!"
+                author="Máté Szilcz"
+                role="CEO & Founder"
+                company="Viti Science"
+              />
+            </div>
+          </div> */}
         </div>
       </div>
     </div>
