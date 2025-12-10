@@ -27,27 +27,6 @@ const HomePage = () => {
       cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
     })();
   }, []);
-  const TwitterEmbed = () => {
-    return (
-      <div>
-        <blockquote className="twitter-tweet" data-media-max-width="600">
-          <p lang="en" dir="ltr">
-            We design mobile apps!{" "}
-            <a href="https://t.co/gtyEr1e8BP">pic.twitter.com/gtyEr1e8BP</a>
-          </p>
-          &mdash; Marcel (@marcelkargul){" "}
-          <a href="https://twitter.com/marcelkargul/status/1982915976716005404?ref_src=twsrc%5Etfw">
-            October 27, 2025
-          </a>
-        </blockquote>{" "}
-        <script
-          async
-          src="https://platform.twitter.com/widgets.js"
-          charSet="utf-8"
-        ></script>
-      </div>
-    );
-  };
 
   const [showAnimation, setshowAnimation] = useState(true);
 
@@ -177,7 +156,7 @@ const HomePage = () => {
             alt="Promo video 2"
             width={600}
             height={300}
-            containerWidthClass="w-full sm:w-[1000px]"
+            containerWidthClass="w-full md:w-[600px] xl:w-[1000px]"
           />
           <VideoPromoCard
             href="https://ik.imagekit.io/m9addwbun/datafa.st%20demo%20(1).mp4"
@@ -185,7 +164,7 @@ const HomePage = () => {
             alt="Promo video 3"
             width={300}
             height={300}
-            containerWidthClass="w-full sm:w-[1000px]"
+            containerWidthClass="w-full md:w-[600px] xl:w-[1000px]"
           />
           <VideoPromoCard
             href="https://ik.imagekit.io/m9addwbun/promo-1.mp4"
@@ -193,7 +172,7 @@ const HomePage = () => {
             alt="Promo video 1"
             width={200}
             height={200}
-            containerWidthClass="w-full sm:w-[1000px]"
+            containerWidthClass="w-full  md:w-[600px] xl:w-[1000px] "
             className=""
           />
 
