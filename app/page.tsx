@@ -151,6 +151,14 @@ const HomePage = () => {
             Our Craft
           </h1>
           <VideoPromoCard
+            href="https://pub-493fc4d6a8154323a65d213627b84bcf.r2.dev/fload%20v3.mp4"
+            imageSrc={Promo2}
+            alt="Promo video 2"
+            width={600}
+            height={300}
+            containerWidthClass="w-full md:w-[600px] xl:w-[1000px]"
+          />
+          <VideoPromoCard
             href="https://ik.imagekit.io/m9addwbun/tlv%20price%20watch%20final%202.mp4"
             imageSrc={Promo2}
             alt="Promo video 2"
