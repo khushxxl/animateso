@@ -151,6 +151,30 @@ const HomePage = () => {
             Our Craft
           </h1>
            <VideoPromoCard
+            href="https://pub-493fc4d6a8154323a65d213627b84bcf.r2.dev/clairon%20ai.MP4"
+            imageSrc={Promo2}
+            alt="Promo video 2"
+            width={600}
+            height={300}
+            containerWidthClass="w-full md:w-[600px] xl:w-[1000px]"
+          />
+           <VideoPromoCard
+            href="https://pub-493fc4d6a8154323a65d213627b84bcf.r2.dev/v3.1%20promptwatch.mp4"
+            imageSrc={Promo2}
+            alt="Promo video 2"
+            width={600}
+            height={300}
+            containerWidthClass="w-full md:w-[600px] xl:w-[1000px]"
+          />
+           <VideoPromoCard
+            href="https://pub-493fc4d6a8154323a65d213627b84bcf.r2.dev/Livechance.mp4"
+            imageSrc={Promo2}
+            alt="Promo video 2"
+            width={600}
+            height={300}
+            containerWidthClass="w-full md:w-[600px] xl:w-[1000px]"
+          />
+           <VideoPromoCard
             href="https://pub-493fc4d6a8154323a65d213627b84bcf.r2.dev/mazaal%20ai%20final%20without%20logo.mp4"
             imageSrc={Promo2}
             alt="Promo video 2"
